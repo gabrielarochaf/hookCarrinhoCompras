@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from 'styled-components'
@@ -10,22 +10,20 @@ import GlobalStyles from './styles/global';
 import Header from './components/Header';
 import { CartProvider } from './hooks/useCart';
 
-import usePersistedState from './util/usePersistedState'
-
 
 
 const App = (): JSX.Element => {
-  const [theme, setTheme] = usePersistedState('theme', red);
+  const [theme, setTheme] = useState('red');
 
   const toggleTheme = () => {
-    setTheme(theme.title === 'red' ? green : red)
+    setTheme(theme.title === )
   }
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={red}>
       <BrowserRouter>
         <CartProvider>
           <GlobalStyles />
-          <Header toggleThemes={toggleTheme} />
+          <Header />
           <Routes />
           <ToastContainer autoClose={3000} />
         </CartProvider>

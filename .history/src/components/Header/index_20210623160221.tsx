@@ -1,20 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { MdShoppingBasket } from 'react-icons/md';
 
 import logo from '../../assets/images/logo.svg';
 import { Container, Cart } from './styles';
 import { useCart } from '../../hooks/useCart';
-import { ThemeContext } from 'styled-components'
+
 import Switch from 'react-switch'
-import { shade } from 'polished';
 
-interface Props {
-  toggleThemes(): void;
-}
-
-const Header = ({ toggleThemes }: Props): JSX.Element => {
-  const { colors, title } = useContext(ThemeContext)
+const Header = (): JSX.Element => {
   const { cart } = useCart();
   const cartSize = cart.length;
 
@@ -35,15 +29,10 @@ const Header = ({ toggleThemes }: Props): JSX.Element => {
       </Cart>
 
       <Switch
-        onChange={toggleThemes}
-        checked={title === 'green'}
+        onChange={() => { }}
+        checked={true}
         checkedIcon={false}
         uncheckedIcon={false}
-        height={10}
-        width={40}
-        handleDiameter={20}
-        offColor={shade(0.15, colors.primary)}
-        onColor={colors.secundary}
       />
 
     </Container>

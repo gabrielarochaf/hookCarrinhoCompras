@@ -10,15 +10,15 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
   }
-  /* #191920  */
+
   body {
-    background: ${props => props.theme.colors.primary} url(${background}) no-repeat center top;
+    background: #191920 url(${background}) no-repeat center top;
+    background: ${props => props.theme.colors.background};
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, button {
     font: 14px Roboto, sans-serif;
-    color: ${props => props.theme.colors.text}
   }
 
   #root {

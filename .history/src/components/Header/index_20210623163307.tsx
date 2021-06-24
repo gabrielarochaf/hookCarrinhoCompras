@@ -14,7 +14,7 @@ interface Props {
 }
 
 const Header = ({ toggleThemes }: Props): JSX.Element => {
-  const { colors, title } = useContext(ThemeContext)
+  const { colors } = useContext(ThemeContext)
   const { cart } = useCart();
   const cartSize = cart.length;
 
@@ -36,7 +36,7 @@ const Header = ({ toggleThemes }: Props): JSX.Element => {
 
       <Switch
         onChange={toggleThemes}
-        checked={title === 'green'}
+        checked={false}
         checkedIcon={false}
         uncheckedIcon={false}
         height={10}

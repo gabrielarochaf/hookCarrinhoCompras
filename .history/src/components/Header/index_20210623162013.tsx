@@ -9,12 +9,8 @@ import { ThemeContext } from 'styled-components'
 import Switch from 'react-switch'
 import { shade } from 'polished';
 
-interface Props {
-  toggleThemes(): void;
-}
-
-const Header = ({ toggleThemes }: Props): JSX.Element => {
-  const { colors, title } = useContext(ThemeContext)
+const Header = (): JSX.Element => {
+  const { colors } = useContext(ThemeContext)
   const { cart } = useCart();
   const cartSize = cart.length;
 
@@ -35,8 +31,8 @@ const Header = ({ toggleThemes }: Props): JSX.Element => {
       </Cart>
 
       <Switch
-        onChange={toggleThemes}
-        checked={title === 'green'}
+        onChange={() => { }}
+        checked={true}
         checkedIcon={false}
         uncheckedIcon={false}
         height={10}
