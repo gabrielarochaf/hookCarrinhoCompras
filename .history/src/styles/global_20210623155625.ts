@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
   /* #191920  */
   body {
-    background: ${props => props.theme.colors.primary} url(${background}) no-repeat center top;
+    background: ${props => props.theme.colors.secundary} url(${background}) no-repeat center top;
     -webkit-font-smoothing: antialiased;
   }
 

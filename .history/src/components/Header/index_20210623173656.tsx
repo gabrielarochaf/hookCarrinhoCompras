@@ -20,6 +20,7 @@ const Header = ({ toggleThemes }: Props): JSX.Element => {
 
   return (
     <Container>
+
       <Link to="/">
         <img src={logo} alt="Rocketshoes" />
       </Link>

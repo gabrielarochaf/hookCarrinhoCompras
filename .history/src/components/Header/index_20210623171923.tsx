@@ -12,9 +12,9 @@ import { shade } from 'polished';
 interface Props {
   toggleThemes(): void;
 }
-
-const Header = ({ toggleThemes }: Props): JSX.Element => {
-  const { colors, title } = useContext(ThemeContext)
+// { toggleThemes }: Props
+const Header = (): JSX.Element => {
+  // const { colors, title } = useContext(ThemeContext)
   const { cart } = useCart();
   const cartSize = cart.length;
 
@@ -34,7 +34,7 @@ const Header = ({ toggleThemes }: Props): JSX.Element => {
         <MdShoppingBasket size={36} color="#FFF" />
       </Cart>
 
-      <Switch
+      {/* <Switch
         onChange={toggleThemes}
         checked={title === 'green'}
         checkedIcon={false}
@@ -44,7 +44,7 @@ const Header = ({ toggleThemes }: Props): JSX.Element => {
         handleDiameter={20}
         offColor={shade(0.15, colors.primary)}
         onColor={colors.secundary}
-      />
+      /> */}
 
     </Container>
   );
